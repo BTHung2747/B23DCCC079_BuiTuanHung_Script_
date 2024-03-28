@@ -1,0 +1,31 @@
+
+.a {
+  display: flex;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+}
+
+.b {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.b:hover {
+  border-color: red;
+}
+
+.b:hover .name{
+  color: #e2b511;
+}
+.b:hover .price{
+  color: #ec7f12;
+}

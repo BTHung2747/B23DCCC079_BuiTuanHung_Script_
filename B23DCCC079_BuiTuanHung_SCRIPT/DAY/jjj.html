@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border: solid rgb(244, 247, 248);
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #bdcdcd;
+}
+</style>
+<body>
+
+<h2></h2>
+
+<table style="width:80%">
+  <form>
+  <tr>
+    <th colspan="2" style="font-size: 40px;color: #131b16; width: 80px;background-color: #838b86;" >Creat Account </th>
+  </tr>
+  <tr>
+    <td style="width: 40px;">
+      <label for="fname" style="color: rgb(16, 166, 116);">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+    </td>
+    <td style="width: 40px;">
+      <label for="lname" style="color: rgb(16, 166, 116);">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value=""><br><br>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      <label for="mail" style="color: rgb(16, 166, 116);">Email*</label><br>
+  <input type="text" id="mail" name="mail" value=""> </br>
+    </td>
+    <td>
+      <label for="pass"style="color: rgb(16, 166, 116);">password*</label><br>
+  <input type="text" id="pass" name="pass" value=""> </br>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      <p style="color: rgb(16, 166, 116);">Gender</p>
+    <input type="radio" id="male" name="fav_language" value="Male">
+    <label for="male" style="color: rgb(16, 166, 116);">Male</label>
+    <input type="radio" id="female" name="fav_language" value="Female">
+    <label for="female" style="color: rgb(16, 166, 116);">Female</label>
+    </td>
+    <td>
+      <p style="color: rgb(16, 166, 116);">Hobbise</p>
+    <input type="radio" id="music" name="fav_language" value="Music">
+    <label for="music" style="color: rgb(16, 166, 116);">Music</label>
+    <input type="radio" id="sport" name="fav_language" value="Sport">
+    <label for="sport" style="color: rgb(16, 166, 116);">Sport</label>
+    <input type="radio" id="travel" name="fav_language" value="Travel">
+    <label for="travel" style="color: rgb(16, 166, 116);">Travel</label>
+    <input type="radio" id="movies" name="fav_language" value="Movies">
+    <label for="movies" style="color: rgb(16, 166, 116);">Movies</label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="source" style="color: rgb(16, 166, 116);">Source</label>
+      <select id="source" name="source">
+        <option value="emol" style="color: rgb(16, 166, 116);">Emploued</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+    </td>
+    <td>
+      <p style="color: rgb(16, 166, 116);"> Income</p>
+      <action="/action_page.php"
+      oninput="x.value=parseInt(a.value)+parseInt(b.value)" style="color: rgb(19, 177, 174); font-size:20px;" >
+        
+        <input type="range" id="a" name="a" value="0" >
+        20K
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p style="color: rgb(16, 166, 116);"> Upload Profile Picture:</p>
+      <label for="myfile"></label>
+      <input type="file" id="myfile" name="myfile">
+    </td>
+    <td>
+      <label for="age">Age:</label><br>
+  <input type="text" id="age" name="age" value="18">
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 80px" colspan="2">
+      <p style="color: rgb(16, 166, 116);">BIO</p>
+      <textarea name="message" rows="10" cols="60" ></textarea>
+
+ <input type="submit">
+    </td>
+  </tr>
+  </form>
+
+</table>
+
+
+
+</body>
+</html>

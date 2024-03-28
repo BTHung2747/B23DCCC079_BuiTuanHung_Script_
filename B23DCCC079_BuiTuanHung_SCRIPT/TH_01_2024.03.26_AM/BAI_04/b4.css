@@ -1,0 +1,31 @@
+
+
+  
+  .b {
+    background-color: rgba(238, 234, 234, 0.765);
+    width: 280px;
+    height: 100px;
+    border:4px solid rgba(238,234,234, 0.765);
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    text-align: center;
+    
+  }
+  
+  
+
+  
+
+  .b:hover .ce{
+    color: #ec7f12;
+  }
+h3 {
+    font-size: 15px;
+}
+h2 {
+    line-height: 0.9;
+    font-size:15px ;
+
+        text-align: left;
+}

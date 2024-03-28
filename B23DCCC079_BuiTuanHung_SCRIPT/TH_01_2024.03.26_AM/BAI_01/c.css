@@ -1,0 +1,25 @@
+
+.b{
+  background-color:rgb(111, 171, 244);
+        }
+.b2{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(245, 235, 235);   
+}
+table, th, td {
+  border:1px solid #000000;
+      }
+.coe{
+  background-color: #2698e9;
+        }
+td {
+     vertical-align: top;
+        }
+a {
+   text-decoration: none;
+        }
+keq {
+    display: flex;
+     align-items: center;
+        }
