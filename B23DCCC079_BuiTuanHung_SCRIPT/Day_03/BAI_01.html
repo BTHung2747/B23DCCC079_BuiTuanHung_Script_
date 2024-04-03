@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<script>
+  function tong(a,b){
+    return a+b
+  }
+  document.write("tong : " + tong(30,60),'<br>')
+  //2 Giai  thừa
+   // C1
+   function giaithua1(n){
+     if(n==0){
+        return 1
+     }
+     else{
+        return n* giaithua1(n-1)
+
+  }}
+  document.write("Giai thừa : " + giaithua1(5),'<br>')
+    //C2
+    let gt2=1
+    function giaithua2(k){
+        for(let i=1;i< giaithua2(k+1);i++){
+           return gt2*=i
+
+
+        }
+    }
+    document.write("Giai thừa2 : "+ giaithua2(5),'<br>')
+  
+
+</script>
+
+</body>
+</html>
