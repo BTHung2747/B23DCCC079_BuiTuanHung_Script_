@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+    // số tự nhiên lớn nhất trong mảng
+    let mang = [10, 5, 8, 20, 15];
+let soln = Math.max(...mang);
+document.write("so lon nhat : " + soln ,'<br>');
+
+
+// số chính phương
+function so(n) {
+    return Math.sqrt(n) % 1 === 0;
+}
+
+function fin(a) {
+    return a.filter(n =>so(n));
+}
+
+let mang1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let p = fin(mang1);
+document.write("Các số chính phương trong mảng là: " + p, '<br>');
+
+// tìm số lớn hơn trung bình cộng của mảng
+function finll(b) {
+    let sum = b.reduce((total, num) => total + num, 0);
+    let tb = sum / b.length;
+    let mio= b.filter(num => num > tb);
+    return mio
+}
+
+let mang2 = [10, 20, 15,7,9,12];
+let mio = finll(mang2);
+document.write("Các số lớn hơn trung bình cộng của mảng là: " + mio,'<br>');
+// trung bình ccoongj của các số ko âm
+mang3 = []
+        var sum = 0;
+        for (var i = 0; i < mang.length; i++) {
+            if (mang[i] >= 0) {
+                mang4.push(mang[i]);
+            }
+        }
+        for (var k = 0; j < mang3.length; k++) {
+            sum += mang4[j];
+        }
+        tbc = sum/mang3.length;
+        document.write("trung bình cộng của các số không âm là: ", + tbc)
+
+</script>
+
+</body>
+</html>
