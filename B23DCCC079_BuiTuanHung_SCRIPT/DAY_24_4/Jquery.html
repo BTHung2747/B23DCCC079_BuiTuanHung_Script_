@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+
+    </script>
+</head>
+<body>
+    <p> Hello </p>
+    <h1> học lập trình</h1>
+    <h2> that la de</h2>
+    <script>
+        $(document).ready(function(){
+        console.log($('p').text())
+
+        $('p').text('<i>Hello</i>');
+        console.log($('h1').html()) .$('h1').html('<i>Hello</i>')
+        console.log($('#name').val());
+
+        $('h1').addClass('text-center');
+        $('h2').append(' that la de')
+    
+       } )
+
+    </script>
+
+
+</body>
+</html>
+

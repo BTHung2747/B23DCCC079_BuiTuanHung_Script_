@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<body>
+
+
+
+    <label for="pass"><b>Password*:</b></label><br>
+    <input type="password" id="pass" name="pass"required><br>
+    
+    
+    <button id="hide">Ẩn</button>
+    <button id="show">Hiện</button>
+    
+<script>
+$(document).ready(function(){
+    $("#show").click(function(){
+    $("#pass").prop("type","text");});
+    $("#hide").click(function(){
+    $("#pass").prop( "type","text")
+});
+});
+
+</script>
+</head>
+
+</body>
+</html>
