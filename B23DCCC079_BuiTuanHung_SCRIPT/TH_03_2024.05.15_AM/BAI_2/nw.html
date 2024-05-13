@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<body>
+     
+    <label for="item"><b>List item:</b></label><br>
+    <input type="text" id="item" name="pass"required><br>
+
+    <button id="add">Add</button>
+    <p id="ol"> </p>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                var newItem = $("#item").val().trim();
+                if(newItem !== "") { 
+                   var listItem = $("<li>").text(newItem).addClass("item");
+                    $("#ol").append(listItem); 
+                    $("#item").val("");
+                }  
+            });
+        });
+    </script>  
+
+   
+    
+ 
+    
+
+    
+   
+</script>
+
+
+</script>
+</head>
+
+</body>
+</html>
