@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+const array = [1, 2, 3];
+const [a, b] = array;
+document.write(a)
+document.write(b,"<br>")
+//*arrow function*//
+var member = (name, age) => {
+    document.write(name, age);
+}
+member("Dương Minh Trí", 4); 
+//*class*//
+class Member {
+  constructor() {
+    this.name = "Dương Minh Trí";
+  }
+
+  memberName() {
+    return this.name;
+  }
+}
+
+class User extends Member {
+  constructor(name, age) {
+    super(name);
+    this.age = 4;
+  }
+
+  memberInfo() {
+    return this.memberName() + 'Tuổi:' + this.age;
+  }
+}
+var x = new User();
+document.write(x.memberInfo()); 
+</script>
+
+</body>
+</html>
+
+</script>
+
+</body>
+</html>
