@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #usersTable, #usersTable th, #usersTable td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>DANH SÁCH NGƯỜI DÙNG</h1>
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Updates</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>Nguyễn Văn c</th>
+                <th>c123@gmail.com</th>
+                <th>
+                    <button>SỬA</button>
+                    <button>XÓA</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="usersTbody">
+        </tbody>
+    </table>
+    <button id="Load-Data">Load Data</button> <br>
+    <h1>TẠO MỚI NGƯỜI DÙNG</h1> <br>
+    Name <input type="text" id="name" name="name"> <br>
+    Email <input type="email" id="email" name="email"> <br>
+    Phone <input type="text" id="phone" name="phone"> <br>
+    Password <input type="text" id="password" name="password"> <br>
+    <button id="create-user">SUBMIT</button>
+    <script>
+        $(document).ready(function(){
+            $('#Load-Data').click(function(){
+                $.ajax({
+                    url: "http://api.uduer.com/users",
+                    type: "GET",
+                    success: function(result){
+                        var data = result.data.users;
+                        console.log(data);
+                        var tbody = $('#usersTbody');
+                        tbody.html('');
+                        data.forEach(function(user){
+                            tbody.append('<tr>' +
+                                '<td>' + user._id + '</td>' +
+                                '<td>' + user.name + '</td>' +
+                                '<td>' + user.email + '</td>' +
+                                '<td><button>SỬA</button><button>XÓA</button></td>' +
+                            '</tr>');
+                        });
+                    },
+                    error: function(error) {
+                        console.log(error)
+                    }
+                })
+            })
+            
+            $('#create-user').click(function(e){
+                e.preventDefault();
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var phone = $('#phone').val();
+                var password = $('#password').val();
+
+                if (!name || !email || !phone || !password) {
+                    alert("Vui lòng nhập đầy đủ thông tin!");
+                    return;
+                }
+
+                var newuser = {name: name,
+                    email: email,
+                    phone: phone,
+                    password: password
+                }
+                $.ajax({
+                    url: "http://api.uduer.com/users",
+                    type: "POST",
+                    data: JSON.stringify(newuser),
+                    contentType: "application/json",
+                    success: function(result) {
+                        if (result.success) {
+                            alert("THÊM MỚI NGƯỜI DÙNG THÀNH CÔNG!");
+                        } else {
+                            alert("THÊM MỚI NGƯỜI DÙNG THẤT BẠI!");
+                        }
+                    },
+                    error: function(error) {
+                        console.log(error)
+                    }
+                })
+            })
+
+            $('tbody').on('click', 'button', function() {
+                var action = $(this).text();
+                var userId = $(this).closest('tr').find('td:first-child').text();
+                if (action === 'SỬA') {
+                    editUser(userId);
+                } else if (action === 'XÓA') {
+                    deleteUser(userId);
+                }
+            });
+            
+            function editUser(userId) {
+            $.ajax({
+                url: `http://api.uduer.com/users/${userId}`,
+                type: "GET",
+                success: function(result) {
+                    var user = result.data.user;
+                    $('#name').val(user.name);
+                    $('#email').val(user.email);
+                    $('#phone').val(user.phone);
+                    $('#password').val(user.password);
+                    $('#create-user').text('CẬP NHẬT');
+                    $('#create-user').off('click').on('click', function(e) {
+                        e.preventDefault();
+                        updateUser(userId);
+                    });
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+            function updateUser(userId) {
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var phone = $('#phone').val();
+                var password = $('#password').val();
+
+                var updatedUser = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    password: password
+                }
+
+                $.ajax({
+                    url: `http://api.uduer.com/users/${userId}`,
+                    type: "PUT",
+                    data: JSON.stringify(updatedUser),
+                    contentType: "application/json",
+                    success: function(result) {
+                        if (result.success) {
+                            alert("CẬP NHẬT NGƯỜI DÙNG THÀNH CÔNG!");
+                            $('#create-user').text('SUBMIT');
+                            $('#create-user').off('click').on('click', function(e) {
+                                e.preventDefault();
+                                createUser();
+                            });
+                        } else {
+                            alert("CẬP NHẬT NGƯỜI DÙNG THẤT BẠI!");
+                        }
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            }
+            function deleteUser(userId) {
+                $.ajax({
+                    url: `http://api.uduer.com/users/${userId}`,
+                    type: "DELETE",
+                    success: function(result) {
+                        if (result.success) {
+                            alert("XÓA NGƯỜI DÙNG THÀNH CÔNG!");
+                            $(`#usersTbody tr td:first-child:contains(${userId})`).closest('tr').remove();
+                        } else {
+                            alert("XÓA NGƯỜI DÙNG THẤT BẠI!");
+                        }
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            }
+        })
+    </script>
+</body>
+</html>
