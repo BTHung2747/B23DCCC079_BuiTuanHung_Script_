@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đặt bàn</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400...lay=swap" rel="stylesheet">
+
+        <!-- DaisyUI -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <!-- CSS -->
+        <link href="db.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <script>
+        function showProfile() {
+            var profile = document.querySelector('.profile');
+
+            if (profile.style.display != "block"){
+                profile.style.display = "block";
+                profile.classList.add('slide-left');
+            } else {
+                profile.style.display = "none";
+            }
+            
+        }
+
+    </script>
+
+    <style>
+        .slide-left {
+	        -webkit-animation: slide-left 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 200ms both;
+	        animation: slide-left 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 200ms both;
+        }
+
+        @-webkit-keyframes slide-left {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(-350px);
+                transform: translateX(-350px);
+                
+            }
+        }
+        @keyframes slide-left {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(-350px);
+                transform: translateX(-350px);
+            }
+        }
+
+    
+    </style>
+
+
+    <body>
+        
+        <script src="db.js"></script>
+         
+         <div class="header">
+            <img src="https://i.pinimg.com/736x/f3/b7/ef/f3b7efc4e20c7ec4a4a0ec33fd20fe80.jpg" alt="logo" width="3600px">
+
+            <div class="flex flex-col"> 
+                <span style="color: #ad0214;">  Món ăn bạn muốn tìm :</span>
+                <div class="sidePart flex">
+                    <label class="input border bg-white border-[3px] border-[#ad0214]  rounded-2xl  flex items-center gap-2">
+                        <span class="material-icons" aria-hidden="true" style="color: #ad0214;"> search </span>   <input type="text" id="search-input" class="grow" placeholder="Search" style="color: #ad0214;"/>
+                        <div id="suggestions-container"></div> </label> 
+                       
+                   <button class="btn text-white rounded-full border-transparent bg-[#ad0214] hover:border-transparent hover:bg-[#99000f]" style="margin-left: 1em;">Tìm kiếm</button>
+                   
+                </div>
+                
+            </div>
+        </div>
+         <!-- Menu Display-->
+         <div class="menu-bar">
+            <div class="tab-buttons grid-cols-12">
+                <button class="btn menu-button col-span-2" aria-label="Trang chủ">TRANG CHỦ</button>
+                <button class="btn menu-button col-span-2" aria-label="Menu">Menu</button>
+                <button class="btn menu-button col-span-2" aria-label="Thông tức ">Tin Tức </button>
+                <button class="btn menu-button col-span-2" aria-label="Đặt Bàn">Đặt Bàn</button>
+                <button class="btn menu-button col-span-2" aria-label="Tư Vấn  ">Tư Vấn</button>
+                <button class="btn menu-button col-span-2" aria-label="CSKH ">CSKH </button>
+            </div>
+            <div class="menu-buttons flex">
+                <button class="btn menu-button material-icons" onclick="showProfile()" aria-label="Shopping Cart">shopping_cart</button>
+                <button class="btn menu-button flex material-icons" onclick="showProfile()" aria-label="Menu" style="padding: 0 1em;">menu</button>
+            </div>
+        </div>
+        <div class="header">
+            <div class="a"></div>
+            <div class="keqing">
+             <a href=""   >
+                <img src="https://img.vn.my-best.com/product_images/e77f44a883c783dbade6ec4cf7d63418.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=598e0439120935c3226eeb7de62eb959" alt="Đặt bàn" width="80px" height="20px" > </a>
+            
+            <a href="đặt bàn">Đặt bàn</a>
+            
+                   
+                        
+                        
+            </div>    
+            <div class="keqing">
+            
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCYMjvhurr1P46l0M05eTkIwCydBTkL6JG_0BO3JAfoZr6YVdJwx-mF3RQfn-gXFfaCKU&usqp=CAU" alt="Đặt ship" width="80" height="40" onclick="showProfile()"> </a>
+                <a onclick="showProfile()"> Đặt Ship</a>
+            </div>
+            <div class=" a"></div>
+        </div>    
+        <div class="b">
+            <h1 style="font-size: 40px;"> Đặt Bàn</h1> 
+        </div>
+        <form action="/action_page.php">
+        <div class="jery">
+            <table style="width: 40%;">
+                <tr>
+                    <th colspan="2" style="font-size: 20px;">Đặt bàn</th>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <input type="text" id="hovaten" class="qwe" placeholder="Nhập tên của bạn" style="color: #ad0214 ;">
+                        
+
+                    </td>
+                    <td style="width: 50%;"> <input type="text" id="sdt" class="qwe" placeholder="Số điện thoại" style="color: #ad0214;" ></td>
+                </tr>
+                <tr>
+                
+                   <td colspan="2">   <input type="text" id="tdn" class="qwe" placeholder="Tên đăng nhập" style="color: #ad0214;" ><td>
+                
+                </tr>
+                <tr>
+                    
+                    
+                    <td style="width: 33%;"><input type="date" id="datemin" class="qwe" name="datemin" min="2023-09-05"></td>
+                        
+                        <td style="width: 33%;">  <input type="text" id="khunggio" class="qwe" placeholder="Khung giờ" style="color: #ad0214;" ></td>
+                       
+                </tr>
+                <tr> <td  colspan="2">  <input type="text" id="skhach" list="sokhach" class="qwe" placeholder="Số khách" style="color: #ad0214;" >
+                    <datalist id="sokhach">
+                        <option value="1 chỗ ngồi">
+                        <option value="2 chỗ ngồi ">
+                        <option value="3 chỗ ngồi">
+                        <option value="4 chỗ ngồi">
+                        <option value="5 chỗ ngồi">
+                        <option value="6 chỗ ngồi">
+                        <option value="7 chỗ ngồi ">
+                        <option value="8 chỗ ngồi">
+                        <option value="9 chỗ ngồi">
+                        <option value="10 chỗ ngồi">
+                        <option value="11 chỗ ngồi">
+                        <option value="12 chỗ ngồi ">
+                        <option value="13 chỗ ngồi">
+                        <option value="14 chỗ ngồi">
+                        <option value="15 chỗ ngồi">
+                        <option value="16 chỗ ngồi">
+                        <option value="17 chỗ ngồi ">
+                        <option value="18 chỗ ngồi">
+                        <option value="19 chỗ ngồi">
+                        <option value="20 chỗ ngồi">
+                      </datalist>
+                </td></tr>
+                <tr>
+                    <th></th>
+                    <th style="height: 60px;text-align:center ; color:grey;font-size: 12px;">Bạn vui lòng chọn khung giờ và chỗ ngồi
+
+                    </th>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2" >   <input type="text" id="ghi chu" class="nml" placeholder="Ghi chú yêu cầu" style="color: #ad0214;" ><td>
+                </tr>
+                <tr>
+                    <td>  <input type="submit"  class="jqk" value="Xác Nhận"></td>
+                </tr>
+            </table>
+        </div>
+        </form>
+        <table style="width: 100%;">
+            <tr>
+                <th style="width: 35%; font-size: 14px;color: grey;height: 400px;">
+                    <img src="https://i.pinimg.com/736x/f3/b7/ef/f3b7efc4e20c7ec4a4a0ec33fd20fe80.jpg" alt="logo" width="80%"height="120px">
+                    <h2>Hà Đông Phục Ma Ngự Trừ Tử</h2><br>
+                    <h2>Địa chỉ: Số 13 Mai Hắc Đế, phường Nguyễn Du, quận Hai Bà Trưng, thành phố Hà Nội</h2><br>
+                    <h2>Hotline:1900 1234 - 1980 345</h2>
+                    <h2>Email: phucma.NTT@gmail.com</h2><br>
+                    <h2>  MST: 0123456789</h2><br>
+                    <h2>Ngày cấp: **/**/***</h2>
+                     <h2>****************</h2>
+                </th>
+               
+                <th style="width: 15%;font-size: 14px;color: grey;">
+                    <h2>Liên kết nhanh </h2><br>
+                     <h2> TRang chủ         </h2> <br>
+                        
+                    <h2>Thông tin nhà hàng       </h2><br>
+                     <h2>Khuyến mãi       </h2><br>
+                       <h2>Liên Hệ       </h2><br>
+                        
+                       <h2>Chính sách vẩn chuyển và kiểm tra</h2><br>
+                       <h2>Chính sách bảo mật thông tin</h2><br>
+
+                </th>
+                <th style="width: 15%;font-size: 14px;color: grey;">
+                    <h2>Menu </h2><br>
+                     <h2> Chính Sách hội viên      </h2> <br>
+                        
+                    <h2>Tư vấn      </h2><br>
+                     <h2>Tuển dụng      </h2><br>
+                       <h2>đổi hoàn tiền</h2>   </h2><br>
+                        
+                       <h2>chính sách thanh toán</h2><br>
+                       
+
+                </th>
+                
+                <th style="width: 35%; height: 150px;">
+                    <h2> Phục Ma Ngự Trù Tử ,Món ngon dành cho bạn</h2>
+
+                    <div class="op">
+                   
+                    
+                        <img src="https://yummyday.vn/uploads/images/ca-chep-hap-bia-1.jpg" alt="cá hấp bia" height="150px" >
+                    </div>
+                  
+                    <div class="op" >
+                 
+                        <img src="https://product.hstatic.net/1000093072/product/lau_bo_8c61fc6ea6e1427d86ee8303bb8b0d0d_large.jpg" alt="Lẩu bò" height="150px" >
+                    </div>
+                    <div class="op"  >
+                        <img src="https://product.hstatic.net/1000093072/product/ca_keo_nuong_muoi_ot_0943a54cef2641288c324fdb74d4f33b_large.jpg"alt="lẩu gà lá giang" height="150px">
+                    </div>
+                    <div class="op"   >
+                        <img src="https://theme.hstatic.net/1000093072/1001049829/14/image_gallery_item_5.png?v=166"alt="lẩu gà" height="150px">
+                    </div>
+                   <div class="op"   >
+                        <img src="https://theme.hstatic.net/1000093072/1001049829/14/image_gallery_item_6.png?v=166"alt="" height="150px">
+                    </div>
+                    <div class="op"   >
+                        <img src="https://theme.hstatic.net/1000093072/1001049829/14/image_gallery_item_3.png?v=166"alt="" height="150px">
+                    </div>
+                </th>
+            </tr>
+            
+           
+        </table>
