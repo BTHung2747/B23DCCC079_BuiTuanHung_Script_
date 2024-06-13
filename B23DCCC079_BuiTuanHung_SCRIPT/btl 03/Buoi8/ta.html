@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400...lay=swap" rel="stylesheet">
+
+        <!-- DaisyUI -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <!-- CSS -->
+        <link href="ta.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <script>
+        function showProfile() {
+            var profile = document.querySelector('.profile');
+
+            if (profile.style.display != "block"){
+                profile.style.display = "block";
+                profile.classList.add('slide-left');
+            } else {
+                profile.style.display = "none";
+            }
+            
+        }
+
+    </script>
+
+    <style>
+        .slide-left {
+	        -webkit-animation: slide-left 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 200ms both;
+	        animation: slide-left 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 200ms both;
+        }
+
+        @-webkit-keyframes slide-left {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(-350px);
+                transform: translateX(-350px);
+                
+            }
+        }
+        @keyframes slide-left {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(-350px);
+                transform: translateX(-350px);
+            }
+        }
+
+    
+    </style>
+
+
+    <body>
+        
+        <script src="ta.js"></script>
+        <header class="header">
+            <img src="logo.png" alt="logo">
+            <div style="margin-left:10px;vertical-align:bottom"><b
+                    style="font-size:40px;font-family: Brush Script MT;color:brown">KQM</b>
+                <b
+                    style="font-size:15px;font-family: Verdana,sans-serif;vertical-align:center; margin-left:5px;font-style:italic;color:brown">Restaurant</b>
+            </div>
+        </header>
+        <div class="menu-bar" style="border-radius:10px">
+            <div class="tab-buttons" style="margin-left:10px">
+                <a href="test.html"><button class="btn menu-button">TRANG CHỦ</button></a>
+            <a href="ta.html"><button class="btn menu-button">MENU</a></button></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="btn menu-button">TIN TỨC</button></a>
+            <a href="db.html"><button class="btn menu-button">ĐẶT BÀN</button></a>
+            <a href="khuyenmai.html"><button class="btn menu-button">KHUYẾN MÃI</button></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="btn menu-button">CSKH</button></a>
+            <a href="gioithieu.html"><button class="btn menu-button">ABOUT US</button></a>
+                
+            </div>
+            <div class="search-container">
+                <div class="search-bar" style="margin-top: 20px; margin-bottom:20px;font-size:small">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm từ khóa, VD: Cơm rang">
+                    <button class="btn btn-primary" style="background-color:#ad0214; margin-left:5px;margin-right:10px">Tìm kiếm</button><div id="suggestions-container"></div>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="header">
+            
+            <div class=" a"></div>
+        </div>    
+        <div class="b" style="background-color:blanchedalmond">
+            <b style="font-size: 30px;">THỰC ĐƠN</b>
+        </div>
+        </div>
+        <div class="p">
+        <div style="margin-left:340px"><span style="color:rgb(255, 255, 255);">Để</span> <span style="color: rgb(255, 255, 255);"><b>đặt bàn hoặc gọi món</b></span>  <span style="color:rgb(255, 255, 255);">bạn có thể đặt mua tại đây hoặc liên hệ qua Hotline :</span> <span style="color: rgb(255, 255, 255);">1900 1234 - 1980 345</span> </div></div>
+        <div class="a"></div>
+        <div style="display:flex;flex-direction:row;width:100%">   
+        <div class="keqing" style="background-color:blanchedalmond;margin:20px;text-align:center;border-radius:10px;margin-left:450px;height:100px">
+            <div><a href="db.html">
+                <img src="https://img.vn.my-best.com/product_images/e77f44a883c783dbade6ec4cf7d63418.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=598e0439120935c3226eeb7de62eb959" alt="Đặt bàn" class="img-size2"> </a>
+            </div>
+            <div style="margin-left:20px;margin-right:20px;margin-top:40px">
+            <a href="db.html"><b>Đặt bàn</b></a>  </div>   
+            </div>    
+            <div class="keqing" style="background-color:blanchedalmond;margin:20px;text-align:center;border-radius:10px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCYMjvhurr1P46l0M05eTkIwCydBTkL6JG_0BO3JAfoZr6YVdJwx-mF3RQfn-gXFfaCKU&usqp=CAU" alt="Đặt ship" onclick="showProfile()" class="img-size2"> </a>
+            
+            <div style="margin-left:20px;margin-right:20px;margin-top:40px">   
+                <a onclick="showProfile()"><b>Đặt Ship</b></a>
+            </div>     
+            </div>
+        </div> 
+        <div class="ganyu">
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://img-global.cpcdn.com/recipes/9b5129d0c9e41377/680x482cq70/c%C6%A1m-rang-d%C6%B0a-bo-recipe-main-photo.jpg" alt="cơm rang dưa bò" width="200px" class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Cơm Rang Dưa Bò _____________35.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Cơm rang dưa bò là một món ăn phổ biến trong ẩm thực Việt Nam. Cơm sẽ được rang chín cùng với thịt bò xắt nhỏ và dưa cải muối, tạo nên hương vị đặc trưng cho món ăn này.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full  " onclick="showProfile()" style="color: white;"> Order</span> 
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://loiphat.com.vn/storage/ads/blog21seo/blog21seo-1.jpg"alt="Phở bò" width="200px" class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Phở Bò ______________________35.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">
+                                        Phở bò là một món ăn nổi tiếng với nước dùng được tạo nên bởi nước ninh xương bò và các loại gia vị tự nhiên như hành, gừng và hoa hồi, quế.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                 <a>  <span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span> </a>
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+        </div>
+        <div class="m">
+
+        </div>
+        <div class="ganyu">
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://i.ytimg.com/vi/5DZzojIwuG4/maxresdefault.jpg" alt="phở xào"  width="200px"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Phở Xào ______________________30.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey; max-width:440px">Phở xào là một biến thể của món phở truyền thống, với sợi phở được xào chín cùng với các loại thực phẩm khác như rau củ, thịt và hải sản. </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full"  onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+            <ul id="item-list">
+                <li>
+                    <div class="lili">
+                        <img src="https://cdn.tgdd.vn/2020/09/CookRecipe/GalleryStep/thanh-pham-556.jpg"alt="gỏi cuốn" width="200px" class="le">
+                        <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Gỏi Cuốn _____________________40.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Gỏi cuốn là một món ăn truyền thống của Việt Nam, thường được làm từ các nguyên liệu như bún, tôm, thịt và các loại rau sống cùng lớp bánh tráng mềm mại cuốn bên ngoài. </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+        </div>
+        <div class="m">
+
+        </div>
+        <div class="ganyu">
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                        <img src="https://noiphodien123.vn/wp-content/uploads/2023/08/cach-nau-pho-ga-ha-noi.jpg" alt="phở gà"  width="200px"class="le">
+                        <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Phở Gà _______________________30.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Tương tự như phở bò, phở gà sẽ được chế biến từ nước ninh xương gà. Đây là một món ăn có hương vị đậm đà và bổ dưỡng.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://dienmaythiennamhoa.vn/static/images/Hinh-cam-nang/dau-phu-sot-ca-chua.jpg"alt="đạu phụ sốt cà chua" width="200px" class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Đậu Phụ Sốt Cà Chua __________35.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Đậu phụ sốt cà là một món ăn phổ biến trong các bữa ăn và bàn nhậu ở Việt Nam. Hương vị thơm ngon từ sốt cà hòa quyện cùng đậu rán đã làm nên sự ngon miệng của món ăn này.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span> </button>
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+        </div>
+        <div class="m">
+
+        </div>
+        <div class="ganyu">
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://beptruong.edu.vn/wp-content/uploads/2019/08/nom-tai-heo-ngo-sen.jpg" alt="nộm tai"  width="30%"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Nộm Tai Heo __________________50.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Nộm tai là một món ăn quen thuộc ở các bàn nhậu. Tai heo được thái mỏng và luộc chín, sau đó được trộn đều với các nguyên liệu như hành tây, hành lá, ớt, tỏi, gia vị như nước mắm, đường, và giấm.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button>
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://i.ytimg.com/vi/NvWJwnhAQfE/maxresdefault.jpg"alt="đạu tẩm mỡ hành" width="30%"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Đậu Tẩm Mỡ Hành _____________25.000VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Đậu phụ được cắt thành từng miếng nhỏ, sau đó được chiên giòn và tẩm trong một hỗn hợp của mỡ hành, tỏi, gia vị như muối, đường, và tiêu. Món này có hương vị thơm ngon từ mỡ hành và hương vị đậm đà từ đậu phụ.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+        </div>
+        <div class="m">
+
+        </div>
+        <div class="ganyu">
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         
+                        <img src="https://cdn.tgdd.vn/2021/02/CookRecipe/Avatar/bo-tai-chanh-thumbnail.jpg" alt="bò xào tái"  width="30%"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Bò Xào Tái____________________50.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Thịt bò tái được cắt thành từng lát mỏng và sau đó xào nhanh trong dầu nóng cùng với hành, tỏi và các loại rau khác. Bò xào tái có hương vị thơm ngon từ thịt bò và gia vị, thường được thưởng thức nóng ấm kèm với cơm trắng.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://cdn.tgdd.vn/Files/2019/05/11/1166239/cach-nau-canh-chua-dau-ca-hoi-ngon-dung-chuan-khong-tanh-202208261543533738.jpg"alt="canh cá cà chua" width="30%"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Canh Cá Cà Chua ______________45.000VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Đây là một món ăn được làm từ cá thái thành từng khúc vừa ăn nấu với cà chua cắt lát và các loại rau như hành tây, cần tây và rau mùi. Món này thường có hương vị thanh mát từ cà chua và ngọt thịt từ cá.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+        </div>
+        <div class="m">
+
+        </div>
+        <div class="ganyu">
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://yummyday.vn/uploads/images/ca-chep-hap-bia-1.jpg" alt="cá hấp bia"  width="30%"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Cá Hấp Bia____________________120.000VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Cá được thái lát hoặc để nguyên tùy thuộc vào sở thích và nhu cầu, sau đó được hấp chín trong nước bia. Bia được sử dụng để làm nước hấp với mục đích khử mùi tanh và tạo sự thơm ngon đực trưng cho cá.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://product.hstatic.net/1000093072/product/ca_keo_nuong_muoi_ot_0943a54cef2641288c324fdb74d4f33b_large.jpg"alt="cá kéo nướng muối ớt" width="30%"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Cá Kèo Nướng Muối Ớt_________129.000VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Cá kèo được ướp muối và ớt rồi nướng hoặc quét dầu trước khi nướng. Món này thường được ăn kèm với nước mắm pha chua ngọt và rau sống như rau sống, rau sống, và cà rốt.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button>
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+        </div>
+        <div class="m">
+
+        </div>
+        <div class="ganyu">
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili">
+                         <img src="https://product.hstatic.net/1000093072/product/lau_bo_8c61fc6ea6e1427d86ee8303bb8b0d0d_large.jpg" alt="Lẩu bò"  width="30%"class="le">
+                         <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Lẩu Bò Lá Giang_______________398.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Món này thường bao gồm nước ninh xương bò, kết hợp với lá giang - một loại lá có hương vị đặc trưng và bò nhúng tái.  </h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button> 
+                                </td>
+                            </tr>
+
+                         </table>
+
+                    </div>
+                    
+                </li>
+            </ul>   
+            <ul id="item-list">
+                <li>
+                   
+                    <div class="lili" >
+                        <img src="https://product.hstatic.net/1000093072/product/ca_keo_nuong_muoi_ot_0943a54cef2641288c324fdb74d4f33b_large.jpg"alt="lẩu gà lá giang" width="30%"class="le">
+                        <table style="width:70% ;">
+                            <tr>
+                                <th>
+                                    <h1 style="font-size: 20px;">Lẩu Gà Lá Giang______________328.000 VND</h1>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;">MENU HÀNG NGÀY / MÓN NGON NỔI BẬT</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 style="color: grey;max-width:440px">Tương tự như món lẩu bò, lẩu gà cũng được làm từ nước ninh xương gà kèm lá giang và thịt gà dùng để nhúng.</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button><span class="text-xl font-bold bg-[#b80719] py-1 px-4 mr-14 rounded-full" onclick="showProfile()" style="color: white;"> Order </span></button>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    
+                </li>
+            </ul>  
+        </div>
+        <table style="width: 100%;">
+            <tr>
+                <th style="width: 45%;height:30px;">
+
+                </th>
+                <th style="width: 30px;height: 30px;"><h3>1</h3></th>
+                <th style="width: 30px;height: 30px;"><p class="h4">2</p></th>
+                
+                <th style="width: 30px;height: 30px;"><p class="h4">Thêm  </p></th>
+                <th style="width: 45%;height:30px;">
+            </tr>
+        </table>
+        <table style="width: 100%;text-align:center">
+            <tr>
+                <th style="width: 35%; font-size: 14px;color: grey;height: 400px;">
+                    <img src="https://i.pinimg.com/736x/f3/b7/ef/f3b7efc4e20c7ec4a4a0ec33fd20fe80.jpg" alt="logo" width="80%"height="120px" class="img-size">
+                    <h2>Hà Đông Phục Ma Ngự Trù Tử</h2><br>
+                    <h2>Địa chỉ: Số X Trần Phú, Hà Đông, Hà Nội</h2><br>
+                    <h2>Hotline:1900 1234 - 1980 345</h2>
+                    <h2>Email: phucma.NTT@gmail.com</h2><br>
+                    <h2>  MST: 0123456789</h2><br>
+                    <h2>Ngày cấp: **/**/***</h2>
+                     <h2>****************</h2>
+                </th>
+               
+                <th style="width: 15%;font-size: 14px;color: rgb(255, 255, 255);">
+                    <h2>Liên kết nhanh </h2><br>
+                     <h2> Trang chủ         </h2> <br>
+                        
+                    <h2>Thông tin nhà hàng       </h2><br>
+                     <h2>Khuyến mãi       </h2><br>
+                       <h2>Liên hệ       </h2><br>
+                        
+                       <h2>Chính sách vận chuyển và kiểm tra</h2><br>
+                       <h2>Chính sách bảo mật thông tin</h2><br>
+
+                </th>
+                <th style="width: 15%;font-size: 14px;color: rgb(255, 255, 255);">
+                    <h2>Menu </h2><br>
+                     <h2> Chính sách Hội viên      </h2> <br>
+                        
+                    <h2>Tư vấn      </h2><br>
+                     <h2>Tuyển dụng      </h2><br>
+                       <h2>Đổi hoàn tiền</h2>   </h2><br>
+                        
+                       <h2>Chính sách thanh toán</h2><br>
+                       
+
+                </th>
+                
+                <th style="width: 35%; height: 150px;color:white">
+                    <p style="margin-right:50px">Hà Đông Phục Ma Ngự Trù Tử</p>
+
+                    <div class="op">
+                   
+                    
+                        <img src="https://yummyday.vn/uploads/images/ca-chep-hap-bia-1.jpg" alt="cá hấp bia" class="img-size2">
+                    </div>
+                  
+                    <div class="op" >
+                 
+                        <img src="https://product.hstatic.net/1000093072/product/lau_bo_8c61fc6ea6e1427d86ee8303bb8b0d0d_large.jpg" alt="Lẩu bò" class="img-size2" >
+                        
+                    </div>
+                    <div class="op"  >
+                        <img src="https://product.hstatic.net/1000093072/product/ca_keo_nuong_muoi_ot_0943a54cef2641288c324fdb74d4f33b_large.jpg"alt="lẩu gà lá giang" class="img-size2">
+                    
+                    </div>
+                    <div class="op"   >
+                        <img src="https://theme.hstatic.net/1000093072/1001049829/14/image_gallery_item_5.png?v=166"alt="lẩu gà" class="img-size2">
+                    
+                    </div>
+                   <div class="op"   >
+                        <img src="https://theme.hstatic.net/1000093072/1001049829/14/image_gallery_item_6.png?v=166"alt="" class="img-size2">
+                    <p></p>
+                    </div>
+                    <div class="op"   >
+                        <img src="https://theme.hstatic.net/1000093072/1001049829/14/image_gallery_item_3.png?v=166"alt="" class="img-size2">
+                    </div>
+                </th>
+            </tr>
+            
+           
+        </table>
+        <div class="profile rounded-bl-[48px] w-600px border-[#ddc8ca] border-l border-b" style="display:none; position: absolute; right: -350px; top: 10.5em; z-index: 10; background: #f9f9f9;">
+            <div class="h-20 w-full" style="position: absolute; background: rgb(241, 136, 136); background: linear-gradient(0deg, rgb(241, 173, 173) 0%, rgba(255,98,115,1) 67%); box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.5) inset;"></div>
+            
+            <div class="avatar flex flex-col items-center py-8">
+                <div class="w-24 rounded-full shadow-lg">
+                    <img src="https://i.pinimg.com/736x/f3/b7/ef/f3b7efc4e20c7ec4a4a0ec33fd20fe80.jpg" alt="" width="24px" height="auto">
+                  </div>
+            
+                <span class="pt-4" style="font-size: larger; color: #ad0214; font-weight: bolder;"> Giỏ Hàng của bạn(Hiện đang có sẵn 2 món) </span>
+               
+            </div>
+            <table>
+                <tr>
+                    <th style='width:35%;font-size: 14px;color: #413c3c; '> Sản Phẩm</th>
+                    <th style="width: 10%;font-size: 14px;color:#413c3c;">Đơn Giá</th>
+                    <th style="width: 30%;font-size: 14px;color:#413c3c;">Số lượng</th>
+                    <th colspan="2" style="width: 25%;font-size: 14px;color:#413c3c;">Thành tiền</th>
+                    
+                </tr>
+                <tr>
+                    <td style="width:30%;height:60px;" ><img src="https://product.hstatic.net/1000093072/product/nom_cu_hu_dua_tom_thit_c27e302f8c144b2cad41006fa569596e_compact.jpg" height="30px"><p>Nộm củ hũ dừa tôm thịt</p></td>
+                    <td style="width: 10%;"><h2 style="font-size:15px;color: rgb(6, 92, 92);">158000đ</h2></td>
+                    <td style="width: 30%;text-align: center; "> <input type="text" id="soluong" name="sl" value="" style="width: 50px;border: 2px solid black;"> </td>
+                    <td style="width: 20%; text-align: center;"> <input type="text" id="tt" name="sl" value="" style="width: 80px;border: 2px solid black;">đ</td>
+                    <td style="width: 10%;"><button class="btn lp material-icons" aria-label="Trash Can">delete</button>
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="mb-10 flex justify-center"><div class="flex w-[80%] justify-between items-center "><a href="" class="underline font-semibold " style="color: #ad0214;" ><h10>Tiến hành thanh toán</h10></a> <button class="btn gc material-icons" onclick="showProfile()" aria-label="Close">close</button>
+            </div>
+         
+        </div>
+    </div>
+
+ </body>
+                    
+            
+                    
+                    
+                    
+                    
+                    
+                    
+                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+      
